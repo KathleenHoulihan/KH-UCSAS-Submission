@@ -9,10 +9,11 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(readr)
+library(cowplot)
 ```
 ```{r Functions}
 # Read the CSV file
-data <- read.csv("../KH-UCSAS-Submission/gym2024data/cleandata/data_2022_2023.csv", header = TRUE)
+data <- read.csv("../gym2024data/cleandata/data_2022_2023.csv", header = TRUE)
 
 #Convert all last names to lower case
 data$LastName <- tolower(data$LastName)
@@ -62,16 +63,20 @@ usa_female_scores <- data %>%
   arrange(Apparatus, desc(Mean_Score)) %>%
   slice_head(n = 10)
 
-  # Plot each apparatus on separate graphs
+  # Plot each apparatus on one graph
   for (apparatus in unique(top_10_athletes$Apparatus)) {
   data_subset <- filter(top_10_athletes, Apparatus == apparatus)
-  p <- ggplot(data_subset, aes(x = SD_Score, y = Mean_Score, label = LastName)) +
-    geom_point() +
-    geom_text(hjust = 0, vjust = 0) +
-    labs(title = paste("Top 10 Female Athletes in", apparatus),
-         x = "Standard Deviation", y = "Mean Score")
-  print(p)
+  p <- ggplot(top_10_athletes, aes(x = SD_Score, y = Mean_Score, label = LastName)) +
+  geom_point() +
+  geom_text(hjust = 0, vjust = 0) +
+  labs(title = "Top 10 Female Athletes",
+       x = "Standard Deviation", y = "Mean Score") +
+  facet_wrap(~Apparatus, scales = "free") +
+  theme_minimal()
   }
+  
+  # Print the combined plot
+  print(p)
   
   # Print the table of top 10 athletes
   top_10_athletes
@@ -136,13 +141,13 @@ top_10_athletes <- top_10_athletes %>%
   
 #Create a scatter plot of the summed means on the y-axis and summed standard deviations on the x-axis
   # Create a scatter plot
-  p <- ggplot(sums, aes(x = Sum_SD, y = Sum_Means, label = LastName)) +
+  p1 <- ggplot(sums, aes(x = Sum_SD, y = Sum_Means, label = LastName)) +
   geom_point() +
   geom_text(hjust = 0, vjust = 0) +
   labs(x = "Sum of Standard Deviations", y = "Sum of Means", title = "Female All-Around Candidates")
 
   # Display the plot
-  print(p)
+  print(p1)
   
 #Calculate and display the mean score and standard deviation sum for every combination of 3 athletes from the sums table
   # Calculate all combinations of 3 athletes
@@ -173,14 +178,14 @@ top_10_athletes <- top_10_athletes %>%
   top_10_combinations <- head(combinations_results[order(-combinations_results$Mean_Score), ], 10)
 
   # Create a scatter plot for the top 10 combinations
-  p <- ggplot(top_10_combinations, aes(x = SD_Sum, y = Mean_Score)) +
+  p2 <- ggplot(top_10_combinations, aes(x = SD_Sum, y = Mean_Score)) +
   geom_point() +
   geom_text(aes(label = Combination), hjust = 0, vjust = 0) +
   labs(x = "Sum of Standard Deviations", y = "Mean Score") +
-  ggtitle("Top 10 Combinations of 3 Female Athletes with Highest Mean Score")
+  ggtitle("Combinations of 3 Female Athletes")
 
   # Display the plot
-  print(p)
+  print(p2)
   
 #Calculate and display the mean score and standard deviation sum for every combination of 4 athletes from the sums table
   # Calculate all combinations of 4 athletes
@@ -211,12 +216,18 @@ top_10_athletes <- top_10_athletes %>%
   top_10_combinations_4 <- head(combinations_results_4[order(-combinations_results_4$Mean_Score), ], 10)
 
   # Create a scatter plot for the top 10 combinations
-  p <- ggplot(top_10_combinations_4, aes(x = SD_Sum, y = Mean_Score)) +
+  p3 <- ggplot(top_10_combinations_4, aes(x = SD_Sum, y = Mean_Score)) +
   geom_point() +
   geom_text(aes(label = Combination), hjust = 0, vjust = 0) +
   labs(x = "Sum of Standard Deviations", y = "Mean Score") +
-  ggtitle("Top 10 Combinations of 4 Female Athletes with Highest Mean Score")
+  ggtitle("Combinations of 4 Female Athletes")
 
   # Display the plot
-  print(p)
+  print(p3)
+  
+  # Combine the three plots into one three-panel plot
+  combined_plot <- cowplot::plot_grid(p1, p2, p3, ncol = 1)
+
+  # Print the combined plot
+  print(combined_plot)
 ```
