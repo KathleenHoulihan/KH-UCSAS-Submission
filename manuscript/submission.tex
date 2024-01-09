@@ -60,19 +60,19 @@ Olympics on behalf of the United States in order to maximize the expected medal 
 
 Currently there is no literature available relevant to predicting gymnastics outcomes at the 2024 
 Paris Summer Olympics or at recent olympics. However, there is literature that relates to various aspects of 
-the data that will be used to form my predictions. For example, the article 'The Prediction of All-Around 
-Event Final Score Based On D and E Score Factors In Women's Artistic Gymnastics' aims to determine the 
+the data that will be used to form my predictions. For example, the article ``The Prediction of All-Around 
+Event Final Score Based On D and E Score Factors In Women's Artistic Gymnastics'' aims to determine the 
 impact of individual apparatus difficulty and execution scores on overall score. 
 Expertise from this article could be useful in allowing us to understand how D and E scores, 
 which are available in my data, play an effort in predicting the overall score. Additionally, the paper 
-'Performance rating in men’s world elite artistic gymnastics: a status-quo study on scoring 
-tendencies at Olympic Games following rule changes' also can play a similar role in predicting overall 
+``Performance rating in men’s world elite artistic gymnastics: a status-quo study on scoring 
+tendencies at Olympic Games following rule changes'' also can play a similar role in predicting overall 
 score. This paper's objective is to analyze the effect on elite artistic gymnastics had by the 2006 rule change 
 which aimed to reduce the dominance of difficulty while strengthening performance differentiation in 
 competition. Notably, the paper found that the rule change resulted in significantly enhanced performance 
 differentiation with the execution or E score being the main predictor of the final score as opposed to 
-the difficulty or D score. Furthermore, in the article 'How Apparatus Difficulty Scores Affect All 
-Around Results in Men's Artistic Gymnastics,' the authors use regression, cluster, and ANOVA analysis to 
+the difficulty or D score. Furthermore, in the article ``How Apparatus Difficulty Scores Affect All 
+Around Results in Men's Artistic Gymnastics,'' the authors use regression, cluster, and ANOVA analysis to 
 analyze how difficulty scores predict overall score differently across different apparatuses. However, in this 
 article the authors found that while difficulty scores may have predictive tendancies for some apparatuses, 
 the strength of the prediction varied drastically from apparatus to apparatus, with there being little to no 
@@ -102,14 +102,14 @@ Furthermore, I processed the data to remove any scores of zero based on the assu
 be indicative of missing scores and that instances of these scores are rare. I further justified my decision 
 to eliminate scores of zero for the purposes of knowing the true mean scores of each athlete on each 
 apparatus for each successful attempt. Additionally, for some athletes and competitions, I found that the vault
-apparatus was listed as `VT,` `VT1,` and 'VT2.' This discrepancy is due to the fact that athletes are permitted
+apparatus was listed as ``VT,'' ``VT1,'' and ``VT2.'' This discrepancy is due to the fact that athletes are permitted
 two attempts on the vault apparatus. In an effort to interpret the data as accurately as possible and avoid having 
-multiple statistics for one athlete on the same apparatus, I corrected this discrepancy by merging 'VT,' 'VT1,' and 
-'VT2' to all be reported as 'VT.' Also, the data source is flawed as it alternates between reporting athlete names
+multiple statistics for one athlete on the same apparatus, I corrected this discrepancy by merging ``VT,'' ``VT1,'' and 
+``VT2'' to all be reported as ``VT.'' Also, the data source is flawed as it alternates between reporting athlete names
 in upper or lower case letters. In order to correct this, I converted all last names to lower case for consistency 
 purposes. Lastly, the data source is inconsistent in the manner that it reports the first names of athletes as certain
 athletes are listed using only their first name at some competitions and are listed using their first and middle names 
-under the 'first name' category for other competitions. In order to resolve this discrepancy, I manually verified that 
+under the ``first name'' category for other competitions. In order to resolve this discrepancy, I manually verified that 
 any athletes listed under two names were the same person and I further verified that there were no United States  
 athletes with the same last name so that all statistical computations could be completed through grouping by last 
 name alone.
@@ -129,12 +129,12 @@ myself with which athletes tend to compete at the most competitions and on which
 the mean versus the standard deviation of the ten athletes with the highest mean scores on each apparatus. 
 Using this visual, I created a parameter for each apparatus that uses both mean score and standard 
 deviation to identify which athletes are best suited to be considered to compete on behalf of the United 
-States on each apparatus. Using this parameter, I identified the 'best' five athletes that compete on
+States on each apparatus. Using this parameter, I identified the ``best'' five athletes that compete on
 each apparatus based on both their success, a high mean score, and their inconsistency, their standard deviation. 
 In cases where there was only one observation, the standard deviation value is unavailable.
 For the purposes of this research, it is reasonable to ignore any athletes who have only competed once on a particular apparatus.
 
-Next, using only the athletes I identified as the 'best' on each apparatus using the parameters, 
+Next, using only the athletes I identified as the ``best'' on each apparatus using the parameters, 
 I calculated the sum of each athletes mean score for each apparatus and the sum of each athlete's standard 
 deviation for each apparatus. Similarly to before, I plotted the mean score versus the standard deviation for 
 these selected athletes. This plot is intended to represent
@@ -209,28 +209,28 @@ frazier & NA & frazier & NA & walker & NA & torry & NA\\
 
 Based on the plot of the top ten female athletes on the balance beam apparatus I selected the parameter of 
 the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five 'best' female athletes on balance beam are Biles, Mcclain, 
+athletes. Based on the parameter, the five ``best'' female athletes on balance beam are Biles, Mcclain, 
 Lee, Sumanasekera, and Blakely.
 
 
 
 Based on the plot of the top ten female athletes on the floor exercise apparatus I selected the parameter of 
 the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five 'best' female athletes for floor exercise are Biles, Lincoln, Carey, 
+athletes. Based on the parameter, the five ``best'' female athletes for floor exercise are Biles, Lincoln, Carey, 
 Mcclain, Dicello, Chiles.
 
 
 
 Based on the plot of the top ten female athletes on the uneven bars apparatus I selected the parameter of 
 half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five 'best' female athletes for uneven bars are Jones, Biles, Wong, 
+athletes. Based on the parameter, the five ``best'' female athletes for uneven bars are Jones, Biles, Wong, 
 Matthews, and Blakely.
 
 
 
 Based on the plot of the top ten athletes on the vault apparatus I selected the parameter of 
 half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five 'best' female athletes on vault are Biles, Carey, Mcclain, Jones, 
+athletes. Based on the parameter, the five ``best'' female athletes on vault are Biles, Carey, Mcclain, Jones, 
 and Chiles.
 
 Ultimately, the list of athletes that ranked among the top five United States female athletes includes Biles, 
@@ -267,32 +267,32 @@ for the top combinations of four of the eleven selected all-around candidates.
 
   Based on the plot of the top ten male athletes on the floor exercise apparatus I selected the parameter of 
   the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on floor exercise are Juda, Mccool, Young, Moldauer, 
+  athletes. Based on the parameter, the five ``best'' male athletes on floor exercise are Juda, Mccool, Young, Moldauer, 
   and Hong.
 
   Based on the plot of the top ten male athletes on the vault apparatus I selected the parameter of 
   the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on vault are Hale, Young, Malone, Briones, and 
+  athletes. Based on the parameter, the five ``best'' male athletes on vault are Hale, Young, Malone, Briones, and 
   Juda.
 
   Based on the plot of the top ten male athletes on the still rings apparatus I selected the parameter of 
   half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on still rings are Whittenburg, Briones, Diab, 
+  athletes. Based on the parameter, the five ``best'' male athletes on still rings are Whittenburg, Briones, Diab, 
   Hong, and Loos.
 
   Based on the plot of the top ten male athletes on the pommel horse apparatus I selected the parameter of 
   half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on pommel horse are Nedoroscik, Young, Malone, 
+  athletes. Based on the parameter, the five ``best'' male athletes on pommel horse are Nedoroscik, Young, Malone, 
   Dang, and Bock.
 
   Based on the plot of the top ten male athletes on the parallel bars apparatus I selected the parameter of 
   half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on parallel bars are Hong, Chou, Walker, Malone, 
+  athletes. Based on the parameter, the five ``best'' male athletes on parallel bars are Hong, Chou, Walker, Malone, 
   and Phillips.
 
   Based on the plot of the top ten male athletes on the high bar apparatus I selected the parameter of 
   half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five 'best' male athletes on high bar are Malone, Juda, Briones, Bold, and 
+  athletes. Based on the parameter, the five ``best'' male athletes on high bar are Malone, Juda, Briones, Bold, and 
   Nguyen.
 
   Ultimately, the list of athletes that ranked among the top five United States male athletes 19 distinct 
@@ -335,7 +335,7 @@ then Lee) and selects athletes with lower standard deviations when means are sim
 For the floor exercise apparatus, I selected the parameter: mean score minus standard deviation. This parameter 
 is reasonable as well as it selects athletes with high means and low standard deviations first (Biles then Lincoln) 
 and selects athletes with lower standard deviations when means are similar (Carey, Dicello, and Chiles). Note, the 
-order in which Carey, Dicello, and Chiles 'should' be selected is debatable, but it is most important that the 
+order in which Carey, Dicello, and Chiles ``should'' be selected is debatable, but it is most important that the 
 parameter selected these athletes as opposed to athletes that have similar mean scores but higher standard deviations 
 (Jones and Mcclain) or low standard deviations and low low mean scores (Wong).
 
@@ -401,14 +401,14 @@ United States Artistic Gymnastics Team at The 2024 Paris Olympics}
 \end{figure}
 
 
-Similar to the female model, I used the same method to determine the 'best' male all-around candidates as I did for females. From 
+Similar to the female model, I used the same method to determine the ``best'' male all-around candidates as I did for females. From 
 Figure~\ref{fig:IAAM} I determined that Juda and Malone are the best male Individual all-around candidates. From 
 Figure~\ref{fig:MAA3} I determined that Juda, Malone, and Young are the best male team all-around finalists 
 candidates. Additionally, from Figure~\ref{fig:MAA4} I determined that Moldauer is the best candidate to also compete 
-with Juda, Malone, and Young in the all-around qualifying round. Comparatively, determining the 'best' fifth Olympic 
-teammate is challenging as there are several apparatuses where our 'best' competitor is not among the four 
+with Juda, Malone, and Young in the all-around qualifying round. Comparatively, determining the ``best'' fifth Olympic 
+teammate is challenging as there are several apparatuses where our ``best'' competitor is not among the four 
 previously selected teammates. However, through examining the the mean score for every male gymnast on every apparatus 
-we can see that many of our 'best' candidates are still ranked very poorly globally, and therefore would not have a 
+we can see that many of our ``best'' candidates are still ranked very poorly globally, and therefore would not have a 
 strong liklihood of medalling at the olympics. Among all of the male USA athletes that are not yet selected, the only 
 athlete that has a relatively decent chance of medaling is Hale, who ranks 6th globally for the Vault apparatus.
 
