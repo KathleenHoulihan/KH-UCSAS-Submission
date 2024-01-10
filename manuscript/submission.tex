@@ -151,8 +151,26 @@ For women, the data challenge presents the task of determining
 which five athletes stand the greatest chance of winning the gold medal for the women's individual all-around,
 team all-around, Balance Beam, Floor Exercise, Uneven Bars, and Vault. 
 
-In cases where there was only one observation, the standard deviation value is unavailable.
-For the purposes of this research, it is reasonable to ignore any athletes who have only competed once on a particular apparatus.
+In order to reduce the vast list of United States female gymnasts to just five athletes, the proposed method in 
+this paper utilizes a paramter value of the score standard deviation multipled by some alpha value subtracted 
+from the mean score for each apparatus, or $\mu - \alpha \sigma$. This paramter value serves to rank athletes based 
+on having both a high mean score for a particualr event and low standard deviation. By subtracting the standard deviation 
+from the mean score, we are able to identify the ``best'' athletes as having the highest parameter values. 
+This alpha value is decided by examining the plots of the mean versus the standard deviation of the ten athletes 
+with the highest mean scores on each apparatus. The default alpha value is 1, and ideally this produces a parameter 
+value where the athletes with the highest mean scores and lowest standard deviations have the highest parameter values. 
+However, in cases where the rank produced by the parameter value selects athletes with comparatively low mean scores and 
+low standrad deviations prior to athletes with significantly higher mean scores and slightly high standard deviations, 
+this alpha value should be reduced until the rank of the athletes coordinates with the order that seems visually most 
+logical based on the plots. While the parameters are to an extent subjective, in the final analysis the exact rank that 
+is determined by the parameter is not terribly signifiant as the parameter values are used to determine the top five 
+athletes for each apparatus and typically play the largest role in determining which athletes are included at the margin. 
+Ultimately, if an athlete is bordering being 4th, 5th, 6th, or 7th best for a particualr apparatus in the United States 
+and the athlete is not superior on another apparatus, it is highly unlikely that they would be selected for the Olympic 
+team at all. In cases where an athlete only has one observation for a prticular apparatus, the 
+standard deviation value is unavailable and thus the parameter value cannot be calculated. For the purposes of this 
+research, it is reasonable to ignore any athletes who have only competed once on a particular apparatus as they would 
+likely not be selected to compete on that apparatus at the Olympics.
 
 In order to select the appropriate athletes, I first processed the data as described in Section~\ref{sec:data} 
 and then adhered to the following procedure:
@@ -258,38 +276,23 @@ frazier & NA & frazier & NA & walker & NA & torry & NA\\
 \end{tabular}
 \end{table}
 
-Based on the plot of the top ten female athletes on the balance beam apparatus I selected the parameter of 
+Based on the plot of the top ten female athletes on the balance beam apparatus in figure~\ref{fig:FA} I selected the parameter of 
 the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five ``best'' female athletes on balance beam are Biles, Mcclain, 
-Lee, Sumanasekera, and Blakely.
-
-
-
-Based on the plot of the top ten female athletes on the floor exercise apparatus I selected the parameter of 
-the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five ``best'' female athletes for floor exercise are Biles, Lincoln, Carey, 
-Mcclain, Dicello, Chiles.
-
-
-
-Based on the plot of the top ten female athletes on the uneven bars apparatus I selected the parameter of 
+athletes. Based on the parameter displayed in table~\ref[tablebbp], the five ``best'' female athletes on balance beam are Biles, Mcclain, 
+Lee, Sumanasekera, and Blakely with Biles and McClain being expert for this apparatus. Simialrly, the five ``best'' 
+female athletes for floor exercise are Biles, Lincoln, Carey, 
+Mcclain, Dicello, Chiles with Biles and Lincoln being expert for this apparatus. Based on the plot of the top ten 
+female athletes on the uneven bars apparatus I selected the parameter of 
 half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
 athletes. Based on the parameter, the five ``best'' female athletes for uneven bars are Jones, Biles, Wong, 
-Matthews, and Blakely.
-
-
-
-Based on the plot of the top ten athletes on the vault apparatus I selected the parameter of 
-half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter, the five ``best'' female athletes on vault are Biles, Carey, Mcclain, Jones, 
-and Chiles.
+Matthews, and Blakely with Jones and Biles being expert for this apparatus. Similarly, the five ``best'' female 
+athletes on vault are Biles, Carey, Mcclain, Jones, 
+and Chiles with Biles and Carey being expert for this apparatus.
 
 Ultimately, the list of athletes that ranked among the top five United States female athletes includes Biles, 
 Mcclain, Lee, Sumanasekera, Blakely, Carey, Jones, Chiles, Wong, Matthews, Lincoln, and Dicello. However, Lee 
 only has reported data for two out of four of the female apparatuses so she will not be considered with the other 
-eleven athletes for individual or team all-around. Thus, the list of selected athletes that are involved in future 
-computations includes Biles, Mcclain, Sumanasekera, Blakely, Carey, Jones, Chiles, Wong, Matthews, Lincoln, 
-and Dicello.
+eleven athletes for individual or team all-around.
 
 \begin{figure}
   \centering
@@ -298,122 +301,14 @@ and Dicello.
   \label{fig:FAA}
 \end{figure}
 
-
-
-Figure~\ref{fig:IAA} and table~\ref{tab:tableIAA} display the summed mean score and standard deviation 
-for each of the eleven selected female all-around candidates.
-
-
-
-
-
-Figure~\ref{fig:AA3} and table~\ref{tab:tableAA3} display the summed mean score and standard deviation 
-for the top combinations of three of the eleven selected female all-around candidates.
-
-
-
-Figure~\ref{fig:AA4} and table~\ref{tab:tableAA4} display the summed mean score and standard deviation 
-for the top combinations of four of the eleven selected all-around candidates.
-
-
-  Based on the plot of the top ten male athletes on the floor exercise apparatus I selected the parameter of 
-  the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on floor exercise are Juda, Mccool, Young, Moldauer, 
-  and Hong.
-
-  Based on the plot of the top ten male athletes on the vault apparatus I selected the parameter of 
-  the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on vault are Hale, Young, Malone, Briones, and 
-  Juda.
-
-  Based on the plot of the top ten male athletes on the still rings apparatus I selected the parameter of 
-  half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on still rings are Whittenburg, Briones, Diab, 
-  Hong, and Loos.
-
-  Based on the plot of the top ten male athletes on the pommel horse apparatus I selected the parameter of 
-  half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on pommel horse are Nedoroscik, Young, Malone, 
-  Dang, and Bock.
-
-  Based on the plot of the top ten male athletes on the parallel bars apparatus I selected the parameter of 
-  half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on parallel bars are Hong, Chou, Walker, Malone, 
-  and Phillips.
-
-  Based on the plot of the top ten male athletes on the high bar apparatus I selected the parameter of 
-  half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
-  athletes. Based on the parameter, the five ``best'' male athletes on high bar are Malone, Juda, Briones, Bold, and 
-  Nguyen.
-
-  Ultimately, the list of athletes that ranked among the top five United States male athletes 19 distinct 
-  names. However, nine of these athletes have not competed on all six apparatuses, so they will not be considered 
-  with the other ten athletes for individual or team all-around. Thus, the list of selected athletes that 
-  are involved in future computations includes Juda, Young, Moldauer, Hong, Hale, Malone, Whittenburg, Loos, 
-  Bock, and Walker.
-
-  Figure~\ref{fig:IAAM} displays the summed mean score and standard deviation 
-  for each of the ten selected male all-around candidates.
-
-
-  Figure~\ref{fig:MAA3} displays the summed mean score and standard deviation 
-  for the top combinations of three of the ten selected male all-around candidates.
-  
-
-  Figure~\ref{fig:MAA4} displays the summed mean score and standard deviation 
-  for the top combinations of four of the ten selected male all-around candidates.
-
-\section{Discussion}
-\label{sec:dis}
-
-In my preliminary steps, I calculated the mean and standard deviation for every female athlete on each 
-apparatus they were reported to have competed on. From these calculations, I decided to cut out most athletes 
-by only inspecting athletes that ranked in the top ten by mean score alone for each apparatus. This was a 
-reasonable elimination of data as the score values among the top ten candidates varied enough, often by over a 
-full point, to justify that athletes that never ranked in the top ten for a particular apparatus are not 
-competitive enough to medal at the Olympics.
-
-I later developed a parameter for each apparatus to further reduce the list of athletes to only include athletes 
-that rank in the top five for each apparatus. However, I designed the parameters to be dependent on the score 
-standard deviation in addition to the mean score. The intent of the paramter is to create a frontier that selects 
-athletes that have high mean scores and low standard deviations in order to select athletes that are the most 
-successful and consistent. Ultimately, for each apparatus I selcted the five athletes with highest parameter value.
-
-For the blanace beam apparatus, I selected the parameter: mean score minus standard deviation. This parameter 
-is very reasonable as it selects athletes with high means and low standard deviations first (Biles then Mcclain 
-then Lee) and selects athletes with lower standard deviations when means are similar (Sumanasekera then Blakely).
-
-For the floor exercise apparatus, I selected the parameter: mean score minus standard deviation. This parameter 
-is reasonable as well as it selects athletes with high means and low standard deviations first (Biles then Lincoln) 
-and selects athletes with lower standard deviations when means are similar (Carey, Dicello, and Chiles). Note, the 
-order in which Carey, Dicello, and Chiles ``should'' be selected is debatable, but it is most important that the 
-parameter selected these athletes as opposed to athletes that have similar mean scores but higher standard deviations 
-(Jones and Mcclain) or low standard deviations and low low mean scores (Wong).
-
-For the uneven bars apparatus, I selected the parameter: mean score minus half of the standard deviation. 
-This parameter is reasonable as well as it selects athletes with extremely high means first (Jones then Biles) and selects 
-athletes with lower standard deviations when means are similar (Wong then Matthews then Blakely). 
-
-For the vault apparatus, I selected the parameter: mean score minus half of the standard deviation. 
-This parameter is reasonable as well as it selects athletes with extremely high means first (Biles then Carey) and selects 
-athletes with lower standard deviations when means are similar (Mcclain then Jones then Chiles). 
-
-Then, I used these candidates in order to determine who is best suited to compete in the all-around events. 
-First, I calculted the summed mean score and summed standard deviation for each selected athlete. Looking at the data 
-values and plot of these individual all-around candidates, it is very clear that Biles is strong candidate to 
+Based on the plots in figure~\ref{fig:FAA}, it is very clear that Biles is strong candidate to 
 compete for the individual all-around medal. However, it is not clear whether Jones or Mcclain is better suited 
-to be the second United States individual all-around candidate.
-
-Then, I used the summed mean score and summed standard deviation for each selected athlete to calculate the 
-summed mean score and summed standard deviation for every combination of 
-three and four of these selected athletes. Looking at the data values and plot of the combinations of three athletes, 
+to be the second United States individual all-around candidate. Looking at the data values and plot of the combinations of three athletes, 
 it is clear that Biles, Jones, and Mcclain are by far the best suited trio to compete for the team all-around medal. 
 Additionally, since this data suggests that both Mcclain and Jones should compete in the qualifying round, there 
 is no need to select one over the other for the second individual all-around candidate spot as they would both get 
 the opportunity to qualify, and their scores at the Olympics will determine which athlete, if either, will qualify 
-to attend the individual all-around finals. 
-
-Looking at the data values and plot of the combinations of four athletes, it is not clear whether Chiles, Carey, or 
+to attend the individual all-around finals. Looking at plot of the combinations of four athletes, it is not clear whether Chiles, Carey, or 
 Blakely is best suited to be the fourth team all-around candidate as their means and standard deviations are very 
 similar. However, looking at the individual apparatus events provides justification for who to ultimately select. 
 Knowing that two athletes per country can compete for an apparatus medal, it is strategic to try to compose the 
@@ -428,8 +323,20 @@ summed combination that included Carey has the lowest mean in comparison to the 
 Blakely, the selection of Carey can be further justified by the facts that the summed mean score difference is 
 within one point the combination including Carey has the lowest summed standard deviation.
 
-Ultimately, in order to maximize the the number of medals the Unites States female team wins, I would comprise the 
-team of the athletes Biles, Jones, Mcclain, Lincoln, and Carey.
+Hence, based on the proposed method, in order to maximize the number of medals the Unites States female team wins, 
+the team should be comprised of the athletes Biles, Jones, Mcclain, Lincoln, and Carey.
+ 
+\section{Discussion}
+\label{sec:dis}
+
+In my preliminary steps, I calculated the mean and standard deviation for every female athlete on each 
+apparatus they were reported to have competed on. From these calculations, I decided to cut out most athletes 
+by only inspecting athletes that ranked in the top ten by mean score alone for each apparatus. This was a 
+reasonable elimination of data as the score values among the top ten candidates varied enough, often by over a 
+full point, to justify that athletes that never ranked in the top ten for a particular apparatus are not 
+competitive enough to medal at the Olympics.
+
+
 
 \appendix
 
@@ -476,6 +383,43 @@ athlete that has a relatively decent chance of medaling is Hale, who ranks 6th g
 
 Ultimately, in order to maximize the the number of medals the Unites States male team wins, I would comprise the 
 team of the athletes Juda, Malone, Young, Moldauer, and Hale.
+
+Based on the plot of the top ten male athletes on the floor exercise apparatus I selected the parameter of 
+the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on floor exercise are Juda, Mccool, Young, Moldauer, 
+and Hong.
+
+Based on the plot of the top ten male athletes on the vault apparatus I selected the parameter of 
+the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on vault are Hale, Young, Malone, Briones, and 
+Juda.
+
+Based on the plot of the top ten male athletes on the still rings apparatus I selected the parameter of 
+half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on still rings are Whittenburg, Briones, Diab, 
+Hong, and Loos.
+
+Based on the plot of the top ten male athletes on the pommel horse apparatus I selected the parameter of 
+half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on pommel horse are Nedoroscik, Young, Malone, 
+Dang, and Bock.
+
+Based on the plot of the top ten male athletes on the parallel bars apparatus I selected the parameter of 
+half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on parallel bars are Hong, Chou, Walker, Malone, 
+and Phillips.
+
+Based on the plot of the top ten male athletes on the high bar apparatus I selected the parameter of 
+half of the score standard deviation subtracted from the mean score in order to identify the best suited five 
+athletes. Based on the parameter, the five ``best'' male athletes on high bar are Malone, Juda, Briones, Bold, and 
+Nguyen.
+
+Ultimately, the list of athletes that ranked among the top five United States male athletes 19 distinct 
+names. However, nine of these athletes have not competed on all six apparatuses, so they will not be considered 
+with the other ten athletes for individual or team all-around. Thus, the list of selected athletes that 
+are involved in future computations includes Juda, Young, Moldauer, Hong, Hale, Malone, Whittenburg, Loos, 
+Bock, and Walker.
+
 
 \bibliographystyle{chicago}
 \bibliography{citations}
