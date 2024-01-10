@@ -329,13 +329,38 @@ the team should be comprised of the athletes Biles, Jones, Mcclain, Lincoln, and
 \section{Discussion}
 \label{sec:dis}
 
-In my preliminary steps, I calculated the mean and standard deviation for every female athlete on each 
-apparatus they were reported to have competed on. From these calculations, I decided to cut out most athletes 
-by only inspecting athletes that ranked in the top ten by mean score alone for each apparatus. This was a 
+Using an anatlytical method dependent on mean and standard deviation derived parameters, this paper 
+outlines a procedure for identifying the Team USA Olympic Women’s Artistic Gymnastics team that will optimize 
+success at the Olympics through numberically evaluating each USA athlete based on both their accuracy and precision. 
+Ultimately, Simone Biles, Shilese Jones, Konnor McClain, Kaliya Lincoln, and Jade Carey can be identified as the 
+the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics teams to optimize 
+success at the 2024 Paris Summer Olympics based on this method.
+
+At various steps throughout the procedure large qualtities of athletes were eliminated from consideration 
+based on various analytical decisions. For example, most athletes were eliminated from consideration as 
+only athletes that ranked in the top ten by mean score alone for each apparatus were inspected. This was a 
 reasonable elimination of data as the score values among the top ten candidates varied enough, often by over a 
 full point, to justify that athletes that never ranked in the top ten for a particular apparatus are not 
-competitive enough to medal at the Olympics.
+competitive enough to medal at the Olympics. Furthermore, this list of athletes was also reduced by half by the 
+use of a subjectively determined paraemter, but this decision is also justified as only two athletes from each 
+country can compete for an apparatus medal, so reducing the considered candidates to only the top five for each 
+apparatus is reasonable as it would be highly unlikely for the 6th best USA candidate for a particualar apparatus 
+to medal at the Olympics.
 
+Notably, this algorithm is not powerful for strong athletes with few attempts on a particualr apparatus as individuals 
+with only one attempt could not possess a parameter value and thus were eliminated. Additionally, this algorithm 
+would not be strong for a country that is inferior at certain events as this model assumes athletes from the country 
+of interest have a reasonable chance at medaling in any category. As such, this model is designed to have the strongest 
+candidates competing in every category regardless of global rank in each category.
+
+Furthermore, the design of this method does not take into account the impact of difficulty or execution scores on 
+overall score. While this data could have been beneficially in selecting the most competitive or successful athletes 
+to comprise the Olympic team, existing literature doubted whether difficulty and execution scores should be 
+used as predictors at all.
+
+Ultimately, while this analytical method may not take into account all of the information and that that was available, 
+the method was able to identify a competitive group of athletes that represent the ``best'' athletes suited 
+to medal and optimize success in each of the Olympic events.
 
 
 \appendix
