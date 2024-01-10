@@ -21,83 +21,110 @@ Using Mean and Standard Deviation Derived Parameters}
   University of Connecticut
 }
 
-NOT DONE
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
     
-  Open with a sentence to establish the importance of the subject of the paper.
-  Identify a gap in the literature to set up the background of the paper.
-  Highlight the novelty/contributions of the paper.
-  For application papers, allude to new discoveries and their impacts.
-  For method papers, outline the essence of the methodology, and evidence from theoretical and numerical studies supporting the methods.
-  It must make sense when read in isolation for those who only read the abstract, and must also provide a clear and accurate summary of the manuscript for readers who read the entire manuscript (Zeiger 2000).
+  Following the 2020 Toyko Olympics where the United States was the only country to have a team medal 
+  in all six of the women's artistic gymnastic events, the performance of the United States women's artistic 
+  gymnastics team at the 2024 Paris Summer Olympics is once again predicted to be the most watched Olympic 
+  dicipline both in the United States and globally. With the whole world anticipating the success of the United 
+  States women's team, it is crucial that the team of five women that are selected to represent the United States 
+  are the athletes best suited to optimize success and maximize the expected medal count in Paris 2024. As there 
+  are no preexisting statistical papers that methodize the selection of athletes for Olympic Gymnastic teams, 
+  this paper aims to answer the question of what metric should be used to judge the olympic canidacy of USA 
+  gymnasts and to outline a statistical method that can be used presently and in the future to select the ``best'' 
+  gymnasts to comprise the United States women's Olympic team in order to maximize success. Using an anatlytical 
+  method dependent on mean and standard deviation derived parameters, this paper outlines a procedure for identifying 
+  the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics team to optimize 
+  success through numberically evaluating each USA athlete based on both their accuracy and precision in order to 
+  more accurately identify the ``best'' team candidates. Through application of this analytical method to present 
+  USA female artistic gymnasts, Simone Biles, Shilese Jones, Konnor McClain, Kaliya Lincoln, and Jade Carey can be 
+  identified as the the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics 
+  teams to optimize success at the 2024 Paris Summer Olympics.
 
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
 
-For decades, gymnastics has been the most watched sport in the Summer Olympics and the United States 
-has been known for bringing gold medal-winning gymnasts to compete. In the 2020 
-Summer Olympics games in Tokyo, the United States female artistic gymnastics team took home 
-the gold medal in the Women's All Around, a bronze medal in the Women's Balance 
-Beam, a gold medal in the Women's Floor Exercise, a silver medal for the Women's
-Team, a bronze medal in the Women's Uneven Bars, and a silver medal in the Women's Vault. 
-Noting that the United States was the only country to have a team medal in all six women's artistic gymnastics 
-categories, the likely hood of the United States bringing female athletes that will medal in the 2024 
-Paris Olympics is very probable. However, in the 2020 Summer Olympic games in Tokyo, the United States 
-male artistic gymnastics team did not medal at all. For the purposes of this data challenge, I focused my 
-time on finding a statistical method that best isolates strong female gymnasts that would be prime candidates 
-for the 2024 olympics as the female USA team historically earns more medals than the male team. Later, I applied 
-my statistical method to the male team, which I anticipate will earn fewer medals than the female team, if any. 
-Noting that this data challenge can be interpreted in a number of ways, I designed my methods to maximize the 
-overall medal count while also placing greatest importance on the team all-around medal. In this paper, I will 
-identify which five female and male artistic gymnasts are best suited to be sent to the Paris 2024 
-Olympics on behalf of the United States in order to maximize the expected medal count. 
+At the Summer Olympics in Paris in 2024, ninety-six men and ninety-six women from around the world will 
+represent their countries and compete in the artistic gymnatics dicipline. The overall importance of the Olympics 
+cannot be understated as the games are a symbol of peaceful global interaction and give people hope that a better 
+world is possible. For decades, gymnastics has been the most watched sport in the Summer Olympics and the United 
+States has been known for bringing gold medal-winning gymnasts to compete. In the 2020 
+Summer Olympics games in Tokyo, the United States women's artistic gymnastics team was the only team to take 
+home a medal in all six categories. Hence, the likelihood of the USA Olympic Women’s Artistic Gymnastics 
+team bringing female athletes that will medal in the 2024 Paris Olympics is very probable. 
+However, in the 2020 Summer Olympic games, the United States 
+male artistic gymnastics team did not medal at all. As the female USA team historically earns more medals than 
+the male team, the focus of this paper is aimed at identifying a method that best isolates strong female gymnasts 
+that would be prime candidates for the 2024 and future Olympics. Later in this paper, the designed statistical 
+method is applied to the male team, which is anticipated to earn fewer medals than the female team, if any 
+(see Appendix). Noting that Olympic ``success'' can be interpreted in a number of ways, the methods of this 
+paper are designed to maximize the overall medal count by maximizing the USA team's opportrunities to medal in each 
+category while also placing greatest importance on the team all-around medal. 
+
+\\
 
 Currently there is no literature available relevant to predicting gymnastics outcomes at the 2024 
 Paris Summer Olympics or at recent olympics. However, there is literature that relates to various aspects of 
 the data that will be used to form my predictions. For example, the article ``The Prediction of All-Around 
 Event Final Score Based On D and E Score Factors In Women's Artistic Gymnastics'' aims to determine the 
 impact of individual apparatus difficulty and execution scores on overall score. 
-Expertise from this article could be useful in allowing us to understand how D and E scores, 
-which are available in my data, play an effort in predicting the overall score. Additionally, the paper 
+Expertise from this article could be useful in allowing us to understand how difficulty and execution scores 
+play a role in predicting the overall score. Additionally, the paper 
 ``Performance rating in men’s world elite artistic gymnastics: a status-quo study on scoring 
 tendencies at Olympic Games following rule changes'' also can play a similar role in predicting overall 
-score. This paper's objective is to analyze the effect on elite artistic gymnastics had by the 2006 rule change 
-which aimed to reduce the dominance of difficulty while strengthening performance differentiation in 
-competition. Notably, the paper found that the rule change resulted in significantly enhanced performance 
-differentiation with the execution or E score being the main predictor of the final score as opposed to 
-the difficulty or D score. Furthermore, in the article ``How Apparatus Difficulty Scores Affect All 
+score. Notably, the paper found that recent Olympic rule changes resulted in significantly enhanced performance 
+differentiation with the execution score being the main predictor of the final score. 
+Furthermore, in the article ``How Apparatus Difficulty Scores Affect All 
 Around Results in Men's Artistic Gymnastics,'' the authors use regression, cluster, and ANOVA analysis to 
 analyze how difficulty scores predict overall score differently across different apparatuses. However, in this 
 article the authors found that while difficulty scores may have predictive tendancies for some apparatuses, 
 the strength of the prediction varied drastically from apparatus to apparatus, with there being little to no 
 predictive ability for some apparatuses. Ultimately, the available literature on predicting artistic 
-gymnastic scores seemed generally limited to how we can use the E and D scores provided in the data sets 
-to predict overall score, but some aspects of this literature casted doubt on whether E and D scores should be 
+gymnastic scores seemed generally limited to how difficulty and execution scores predict overall score, 
+but some aspects of this literature casts doubt on whether difficulty and execution scores should be 
 used as predictors at all.
+
+\\
+
+As existing literature fails to suggest how data from major domestic and international gymnastics competitions 
+from the seasons leading up to the Summer Olympics can be used to identify the ``best'' Olympic team candidates, 
+the analytical method presented in this paper aims to outline a procedure that takes into account data from recent 
+gymnastics competitions and Olympic competition structure in orer to identify the group of five athletes who will 
+enable the Team USA Olympic Women’s Artistic Gymnastics team to optimize success in Paris 2024. If Olympic 
+competition structure and recent competitive scores on each apparatus are taken into consideration, then an 
+anatlytical method dependent on mean and standard deviation derived parameters can be used to identify the foremost 
+candidates to compete on behalf of the United States at the Olympics.
+
+\\
+
+The rest of this paper is organized as follows. First, I will evaluate the data that is available in order to complete 
+this project in Section~\ref{sec:data}. Then, I will discuss my 
+analytical methods to determine the atheltes that should be sent to the Olympics from the United States 
+in Section~\ref{sec:meth}. Later, I will present the results of my 
+methods in Section~\ref{sec:res}. Lastly, I will discuss the meaning of my results, some challenges, 
+and some limitations of this project in Section~\ref{sec:dis}.
+
 
 \section{Data}
 \label{sec:data}
 
 To predict which of the United States athletes are most likely to medal on the various apparatuses, 
-I will be using the cleaned data that 
-is provided in the UCSAS data challenge that includes data from major domestic and international 
-gymnastic competitions from 2022 and 2023. I have opted against using the data from major domestic
-and international gymnastic competions from 2017 to 2021 as time, injuries, 
+I will be using the cleaned data that is provided by the UConn Sports Analytics Symposium data challenge 
+that includes data from major domestic and international gymnastic competitions from 2022 and 2023. 
+I have opted against using the older data from 2017 to 2021 as time, injuries, 
 and other factors can have a large impact on the success of a gymnast, so the greatest predictor
 of the Olympic outcomes in 2024 will be the most recent data.
 \\
 For the purposes of my research design, when determining the most ideal feamle olympic candidates, 
 I limited the data I utilized to only include female United States
 gymnasts, presuming that the United States female gymnasts have a strong chance at earning medals in any category, 
-based on the results of the 2020 Summer Olympics. When determining the most ideal American male candidates, 
-I did inspect the data of non United States gymnasts in order to determine which medals the United States 
-male team has the greatest chance of earning. 
+based on the results of the 2020 Summer Olympics. 
 Furthermore, I processed the data to remove any scores of zero based on the assumption that these may 
 be indicative of missing scores and that instances of these scores are rare. I further justified my decision 
 to eliminate scores of zero for the purposes of knowing the true mean scores of each athlete on each 
@@ -400,6 +427,9 @@ United States Artistic Gymnastics Team at The 2024 Paris Olympics}
   \label{fig:FAA}
 \end{figure}
 
+When determining the most ideal American male candidates, 
+I did inspect the data of non United States gymnasts in order to determine which medals the United States 
+male team has the greatest chance of earning. 
 
 Similar to the female model, I used the same method to determine the ``best'' male all-around candidates as I did for females. From 
 Figure~\ref{fig:IAAM} I determined that Juda and Malone are the best male Individual all-around candidates. From 
