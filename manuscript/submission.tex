@@ -27,19 +27,16 @@ Based on Performance and Stability To Maximize Success}
 
 \begin{abstract}
     
-  Following the 2020 Toyko Olympics where the United States was the only country to have a team medal 
-  in all six of the women's artistic gymnastic events, the performance of the United States women's artistic 
-  gymnastics team at the 2024 Paris Summer Olympics is once again predicted to be the most watched Olympic 
-  dicipline both in the United States and globally. With the whole world anticipating the success of the United 
-  States women's team, it is crucial that the team of five women that are selected to represent the United States 
+  With the whole world anticipating the success of the United States women's artistic gymnastics team, 
+  it is crucial that the team of five women that are selected to represent the United States 
   are the athletes best suited to optimize success and maximize the expected medal count in Paris 2024. As there 
   are no preexisting statistical papers that methodize the selection of athletes for Olympic Gymnastic teams, 
-  this paper aims to answer the question of what metric should be used to judge the olympic canidacy of USA 
+  this paper aims to answer the question of what metric should be used to judge the Olympic canidacy of USA 
   gymnasts and to outline a statistical method that can be used presently and in the future to select the ``best'' 
   gymnasts to comprise the United States women's Olympic team in order to maximize success. Using an anatlytical 
   method dependent on mean and standard deviation derived parameters, this paper outlines a procedure for identifying 
   the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics team to optimize 
-  success through numberically evaluating each USA athlete based on both their accuracy and precision in order to 
+  success through numberically evaluating each USA athlete based on both their performance and stability in order to 
   more accurately identify the ``best'' team candidates. Through application of this analytical method to present 
   USA female artistic gymnasts, Simone Biles, Shilese Jones, Konnor McClain, Kaliya Lincoln, and Jade Carey can be 
   identified as the the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics 
@@ -50,8 +47,12 @@ Based on Performance and Stability To Maximize Success}
 \section{Introduction}
 \label{sec:intro}
 
-\citet{JonasRohleder2023} did something...
-
+Following the 2020 Toyko Olympics where the United States was the only country to have a team medal 
+in all six of the women's artistic gymnastic events, the performance of the United States women's artistic 
+gymnastics team at the 2024 Paris Summer Olympics is once again predicted to be the most watched Olympic 
+dicipline both in the United States and globally. With the whole world anticipating the success of the United 
+States women's team, it is crucial that the team of five women that are selected to represent the United States 
+are the athletes best suited to optimize success and maximize the expected medal count in Paris 2024.
 
 At the Summer Olympics in Paris in 2024, ninety-six men and ninety-six women from around the world will 
 represent their countries and compete in the artistic gymnatics dicipline. The overall importance of the Olympics 
@@ -73,17 +74,14 @@ category while also placing greatest importance on the team all-around medal.
 
 Currently there is no literature available relevant to predicting gymnastics outcomes at the 2024 
 Paris Summer Olympics or at recent olympics. However, there is literature that relates to various aspects of 
-the data that will be used to form my predictions. For example, the article ``The Prediction of All-Around 
-Event Final Score Based On D and E Score Factors In Women's Artistic Gymnastics'' aims to determine the 
+the data that will be used to form my predictions. For example, the article \citet{ScienceOfGymnastics2021} aims to determine the 
 impact of individual apparatus difficulty and execution scores on overall score. 
 Expertise from this article could be useful in allowing us to understand how difficulty and execution scores 
-play a role in predicting the overall score. Additionally, the paper 
-``Performance rating in men’s world elite artistic gymnastics: a status-quo study on scoring 
-tendencies at Olympic Games following rule changes'' also can play a similar role in predicting overall 
+play a role in predicting the overall score. Additionally, the article \citet{JonasRohleder2023} 
+also can play a similar role in predicting overall 
 score. Notably, the paper found that recent Olympic rule changes resulted in significantly enhanced performance 
 differentiation with the execution score being the main predictor of the final score. 
-Furthermore, in the article ``How Apparatus Difficulty Scores Affect All 
-Around Results in Men's Artistic Gymnastics,'' the authors use regression, cluster, and ANOVA analysis to 
+Furthermore, in the article \citet{ApparatusDifficulty2010} the authors use regression, cluster, and ANOVA analysis to 
 analyze how difficulty scores predict overall score differently across different apparatuses. However, in this 
 article the authors found that while difficulty scores may have predictive tendancies for some apparatuses, 
 the strength of the prediction varied drastically from apparatus to apparatus, with there being little to no 
@@ -179,60 +177,67 @@ In order to select the appropriate athletes, I first processed the data as descr
 and then adhered to the following procedure:
 
 \begin{enumerate}
-  \item Calculate and examine the mean and standard deviations of each American female athlete's score 
-  on each apparatus.
-  \item Calculate the number of observations for each athlete on each apparatus.
-  \item Plot the mean versus the standard deviation of the ten athletes with the highest mean scores on each 
-  apparatus.
+  \item Determine the best individual apparatus candidates.
   \begin{enumerate}
-    \item Use these plots as a visual to represent the possible scores that could be achielved in each apparatus 
-    component of the Olympics.
-    \item Using the plots, create a parameter for each apparatus that uses both mean score and standard 
-    deviation to identify which athletes are best suited to be considered to compete on behalf of the United 
-    States on each apparatus.
+    \item Calculate and examine the mean and standard deviations of each American female athlete's score 
+    on each apparatus.
+    \item Calculate the number of observations for each athlete on each apparatus.
+    \item Plot the mean versus the standard deviation of the ten athletes with the highest mean scores on each 
+    apparatus.
     \begin{enumerate}
-      \item Select the five athletes with the highest parameter value for each apparatus to identify the ``best'' 
-      five athletes that compete on each apparatus based on both their success, a high mean score, and their 
-      inconsistency, their standard deviation.
+      \item Use these plots as a visual to represent the possible scores that could be achielved in each apparatus 
+     component of the Olympics.
+     \item Using the plots, create a parameter for each apparatus that uses both mean score and standard 
+     deviation to identify which athletes are best suited to be considered to compete on behalf of the United 
+     States on each apparatus.
+     \begin{enumerate}
+       \item Select the five athletes with the highest parameter value for each apparatus to identify the ``best'' 
+        five athletes that compete on each apparatus based on both their success, a high mean score, and their 
+        inconsistency, their standard deviation.
+     \end{enumerate}
+     \item Identify the athletes with the two largest paramter values as the ``best'' on each apparatus.
     \end{enumerate}
-    \item Identify the athletes with the two largest paramter values as the ``best'' on each apparatus.
   \end{enumerate}
-  \item Produce a list of ``target athletes'' for furture computations that contains all athletes that were identified 
-  as being in the top five for any apparatus in the last step.
-  \begin{enumerate}
-    \item Remove any athletes from the ``target athletes'' list that have not competed on all aparatuses.
+  \item Determine the best individual all-around candidates.
+  \begin enumerate
+   \item Produce a list of ``target athletes'' for furture computations that contains all athletes that were identified 
+   as being in the top five for any apparatus in the last step.
+   \begin{enumerate}
+     \item Remove any athletes from the ``target athletes'' list that have not competed on all aparatuses.
+   \end{enumerate}
+   \item Calculate the sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
+   deviation for each apparatus.
+    \item Plot the mean score sum versus the standard deviation sum for each ``target athlete.''
+   \begin{enumerate}
+     \item Use this plot as a visual to represent the possible scores that could be achielved in the individual all-around 
+     component of the Olympics.
+   \end{enumerate}
   \end{enumerate}
-  \item Calculate the sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
-  deviation for each apparatus.
-  \item Plot the mean score sum versus the standard deviation sum for each ``target athlete.''
+  \item Determine the best team all-around candidates.
   \begin{enumerate}
-    \item Use this plot as a visual to represent the possible scores that could be achielved in the individual all-around 
+   \item Calculate the summed mean score and standard deviation sum of every combination of three athletes using the previously 
+   calculated sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
+   deviation for each apparatus.
+   \item Plot the summed mean score versus the standard deviation for the ten combinations of three athletes with the 
+   highest summed mean score.
+   \begin{enumerate}
+     \item Use this plot as a visual to represent the possible scores that could be achielved in the all-around team finals 
     component of the Olympics.
+   \end{enumerate}
+   \item Calculate the summed mean score and standard deviation sum of every combination of four athletes using the previously 
+   calculated sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
+   deviation for each apparatus.
+   \item Plot the summed mean score versus the standard deviation for the ten combinations of four athletes with the 
+   highest summed mean score.
+   \begin{enumerate}
+      \item Use this plot as a visual to represent the possible scores that could be achielved in the all-around team qualifying  
+     round of the Olympics.
+   \end{enumerate}
   \end{enumerate}
-  \item Calculate the summed mean score and standard deviation sum of every combination of three athletes using the previously 
-  calculated sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
-  deviation for each apparatus.
-  \item Plot the summed mean score versus the standard deviation for the ten combinations of three athletes with the 
-  highest summed mean score.
-  \begin{enumerate}
-    \item Use this plot as a visual to represent the possible scores that could be achielved in the all-around team finals 
-   component of the Olympics.
-  \end{enumerate}
-  \item Calculate the summed mean score and standard deviation sum of every combination of four athletes using the previously 
-  calculated sum of each ``target athlete's'' mean score for each apparatus and the sum of each athlete's standard 
-  deviation for each apparatus.
-  \item Plot the summed mean score versus the standard deviation for the ten combinations of four athletes with the 
-  highest summed mean score.
-  \begin{enumerate}
-    \item Use this plot as a visual to represent the possible scores that could be achielved in the all-around team qualifying  
-   round of the Olympics.
-  \end{enumerate}
-  \item Visully exammine each produced plot to build a final team of five in an effort to include in 
-  the final team the best three candidates for the team all-around, the best candidate for the fourth qualifying position, 
-  the best two candidates for the individual all-around, and the two athletes that are superior on each apparatus.
-
+\item Visully exammine each produced plot to build a final team of five in an effort to include in 
+    the final team the best three candidates for the team all-around, the best candidate for the fourth qualifying position, 
+    the best two candidates for the individual all-around, and the two athletes that are superior on each apparatus.
 \end{enumerate}
-
 
 
 \section{Results}
@@ -240,14 +245,14 @@ and then adhered to the following procedure:
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{FemaleAthleteApparatus.pdf}
-  \caption{Top 10 Female Candidates for the Olympic Balance Beam, Floor Exercise, Uneven Bars, and Vault Apparatus}
+  \includegraphics[scale=0.7]{FinalFemaleApparatusPlot.pdf}
+  \caption{Top 10 Female Candidates for the Olympic Balance Beam, Floor Exercise, Uneven Bars, and Vault Apparatus.}
   \label{fig:FA}
 \end{figure}
 
 \begin{table}
   \caption{Top ten female candidates for each apparatus based on mean score alone and 
-  their $\mu - \alpha \sigma$ parameter values}
+  their $\mu - \alpha \sigma$ parameter values.}
   \label{tab:tableBBP}
 \centering
 \begin{tabular}[t]{llllllll}
@@ -299,8 +304,8 @@ eleven athletes for individual or team all-around.
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.55]{FemaleMultipleAllAround.pdf}
-  \caption{The best candidates for the female individual all-around and team all around medals}
+  \includegraphics[scale=0.55]{FinalFemaleAllAroundPlot.pdf}
+  \caption{The best candidates for the female individual all-around and team all around medals.}
   \label{fig:FAA}
 \end{figure}
 
@@ -368,21 +373,20 @@ to medal and optimize success in each of the Olympic events.
 
 \appendix
 
-\section{Appendix: Application of the Mean and Standard Deviation Derived Parameters Methods For The Male 
-United States Artistic Gymnastics Team at The 2024 Paris Olympics}
+\section{Application of Methods To The Male USA Artistic Gymnastics Team}
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.5]{MaleAthleteApparatus.pdf}
+  \includegraphics[scale=0.5]{FinalMaleApparatusPlot.pdf}
   \caption{Top 10 Male Candidates for the Olympic Floor Exercise, Pommel Horse, Still Rings, Vault, Parallel Bars, 
-  and High Bar Apparatus}
+  and High Bar Apparatus.}
   \label{fig:MA}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{MaleMultipleAllAround.pdf}
-  \caption{The best candidates for the male individual all-around and team all around medals}
+  \includegraphics[scale=0.7]{FinalMaleAllAroundPlot.pdf}
+  \caption{The best candidates for the male individual all-around and team all around medals.}
   \label{fig:MAA}
 \end{figure}
 
