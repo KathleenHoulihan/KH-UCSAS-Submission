@@ -10,6 +10,7 @@ library(dplyr)
 library(ggplot2)
 library(readr)
 library(cowplot)
+library(ggrepel)
 ```
 ```{r Functions}
 # Read the CSV file
@@ -54,7 +55,7 @@ usa_male_scores <- data %>%
 
 #Create a table with the top 10 athletes with the highest mean scores for each apparatus and to plot each apparatus on separate graphs
   # Filter for USA male gymnasts
-  usa_female_scores <- data %>%
+  usa_male_scores <- data %>%
   filter(Country == "USA" & Gender == "m")
 
   # Group by apparatus, calculate mean, standard deviation, and number of observations
@@ -73,16 +74,23 @@ usa_male_scores <- data %>%
   slice_head(n = 10)
 
   # Plot each apparatus on one graph
-  for (apparatus in unique(top_10_athletes$Apparatus)) {
-  data_subset <- filter(top_10_athletes, Apparatus == apparatus)
   p <- ggplot(top_10_athletes, aes(x = SD_Score, y = Mean_Score, label = LastName)) +
   geom_point() +
-  geom_text(hjust = 0, vjust = 0) +
-  labs(x = "Standard Deviation", y = "Mean Score") +
+  geom_text_repel(box.padding = 0.25, point.padding = 0.25) +  
+  labs(title = "Top 10 Male Athletes",
+       x = "Standard Deviation", y = "Mean Score") +
   facet_wrap(~Apparatus, scales = "free") +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "gray85"),  
+    panel.grid.major = element_line(color = "white"),
+    axis.text = element_text(color = "black"),  
+    axis.title = element_text(color = "black"), 
+    plot.title = element_text(color = "black")  
+  )
+  
+   # Print the combined plot
   print(p)
-  }
   
   # Print the table of top 10 athletes
   top_10_athletes
@@ -149,8 +157,17 @@ top_10_athletes <- top_10_athletes %>%
   # Create a scatter plot
   p1 <- ggplot(sums, aes(x = Sum_SD, y = Sum_Means, label = LastName)) +
   geom_point() +
-  geom_text(hjust = 0, vjust = 0) +
-  labs(x = "Sum of Standard Deviations", y = "Sum of Means", title = "Male All-Around Candidates")
+  geom_text_repel(box.padding = 0.25, point.padding = 0.25) +
+  labs(x = "Sum of Standard Deviations", y = "Sum of Means", title = "Male All-Around Candidates") +
+  facet_wrap(~., scales = "free") +  
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "gray85"),  
+    panel.grid.major = element_line(color = "white"),
+    axis.text = element_text(color = "black"),  
+    axis.title = element_text(color = "black"), 
+    plot.title = element_text(color = "black")  
+  )
 
   # Display the plot
   print(p1)
@@ -185,10 +202,19 @@ top_10_athletes <- top_10_athletes %>%
 
   # Create a scatter plot for the top 10 combinations
   p2 <- ggplot(top_10_combinations, aes(x = SD_Sum, y = Mean_Score)) +
-  geom_point() +
-  geom_text(aes(label = Combination), hjust = 0, vjust = 0) +
-  labs(x = "Sum of Standard Deviations", y = "Mean Score") +
-  ggtitle("Top 10 Combinations of 3 Male Athletes with Highest Mean Score")
+    geom_point() +
+    geom_text_repel(aes(label = Combination), box.padding = 0.25, point.padding = 0.25) +
+    labs(x = "Sum of Standard Deviations", y = "Mean Score") +
+    ggtitle("Combinations of 3 Male Athletes") +
+    facet_wrap(~., scales = "free") +  
+    theme_minimal() +
+    theme(
+        panel.background = element_rect(fill = "gray85"),  
+        panel.grid.major = element_line(color = "white"),
+        axis.text = element_text(color = "black"),  
+        axis.title = element_text(color = "black"), 
+        plot.title = element_text(color = "black")  
+    )
 
   # Display the plot
   print(p2)
@@ -223,10 +249,19 @@ top_10_athletes <- top_10_athletes %>%
 
   # Create a scatter plot for the top 10 combinations
   p3 <- ggplot(top_10_combinations_4, aes(x = SD_Sum, y = Mean_Score)) +
-  geom_point() +
-  geom_text(aes(label = Combination), hjust = 0, vjust = 0) +
-  labs(x = "Sum of Standard Deviations", y = "Mean Score") +
-  ggtitle("Top 10 Combinations of 4 Male Athletes with Highest Mean Score")
+    geom_point() +
+    geom_text_repel(aes(label = Combination), box.padding = 0.25, point.padding = 0.25) +
+    labs(x = "Sum of Standard Deviations", y = "Mean Score") +
+    ggtitle("Combinations of 4 Male Athletes") +
+    facet_wrap(~., scales = "free") +  
+    theme_minimal() +
+    theme(
+        panel.background = element_rect(fill = "gray85"),  
+        panel.grid.major = element_line(color = "white"),
+        axis.text = element_text(color = "black"),  
+        axis.title = element_text(color = "black"), 
+        plot.title = element_text(color = "black")  
+    )
 
   # Display the plot
   print(p3)
