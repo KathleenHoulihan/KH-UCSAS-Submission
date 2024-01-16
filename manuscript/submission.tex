@@ -31,12 +31,12 @@ Based on Performance and Stability To Maximize Success}
   it is crucial that the team of five women that are selected to represent the United States 
   are the athletes best suited to optimize success and maximize the expected medal count in Paris 2024. As there 
   are no preexisting statistical papers that methodize the selection of athletes for Olympic Gymnastic teams, 
-  this paper aims to answer the question of what metric should be used to judge the Olympic canidacy of USA 
+  this paper aims to answer the question of what metric should be used to judge the Olympic candidacy of USA 
   gymnasts and to outline a statistical method that can be used presently and in the future to select the ``best'' 
-  gymnasts to comprise the United States women's Olympic team in order to maximize success. Using an anatlytical 
+  gymnasts to comprise the United States women's Olympic team in order to maximize success. Using an analytical 
   method dependent on mean and standard deviation derived parameters, this paper outlines a procedure for identifying 
   the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics team to optimize 
-  success through numberically evaluating each USA athlete based on both their performance and stability in order to 
+  success through numerically evaluating each USA athlete based on both their performance and stability in order to 
   more accurately identify the ``best'' team candidates. Through application of this analytical method to present 
   USA female artistic gymnasts, Simone Biles, Shilese Jones, Konnor McClain, Kaliya Lincoln, and Jade Carey can be 
   identified as the the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics 
@@ -50,12 +50,12 @@ Based on Performance and Stability To Maximize Success}
 Following the 2020 Toyko Olympics where the United States was the only country to have a team medal 
 in all six of the women's artistic gymnastic events, the performance of the United States women's artistic 
 gymnastics team at the 2024 Paris Summer Olympics is once again predicted to be the most watched Olympic 
-dicipline both in the United States and globally. With the whole world anticipating the success of the United 
+discipline both in the United States and globally. With the whole world anticipating the success of the United 
 States women's team, it is crucial that the team of five women that are selected to represent the United States 
 are the athletes best suited to optimize success and maximize the expected medal count in Paris 2024.
 
 At the Summer Olympics in Paris in 2024, ninety-six men and ninety-six women from around the world will 
-represent their countries and compete in the artistic gymnatics dicipline. The overall importance of the Olympics 
+represent their countries and compete in the artistic gymnastics discipline. The overall importance of the Olympics 
 cannot be understated as the games are a symbol of peaceful global interaction and give people hope that a better 
 world is possible. For decades, gymnastics has been the most watched sport in the Summer Olympics and the United 
 States has been known for bringing gold medal-winning gymnasts to compete. In the 2020 
@@ -68,22 +68,22 @@ the male team, the focus of this paper is aimed at identifying a method that bes
 that would be prime candidates for the 2024 and future Olympics. Later in this paper, the designed statistical 
 method is applied to the male team, which is anticipated to earn fewer medals than the female team, if any 
 (see Appendix). Noting that Olympic ``success'' can be interpreted in a number of ways, the methods of this 
-paper are designed to maximize the overall medal count by maximizing the USA team's opportrunities to medal in each 
+paper are designed to maximize the overall medal count by maximizing the USA team's opportunities to medal in each 
 category while also placing greatest importance on the team all-around medal. 
 
 
 Currently there is no literature available relevant to predicting gymnastics outcomes at the 2024 
 Paris Summer Olympics or at recent olympics. However, there is literature that relates to various aspects of 
-the data that will be used to form my predictions. For example, the article \citet{ScienceOfGymnastics2021} aims to determine the 
+the data that will be used to form my predictions. For example, the article by \citet{ScienceOfGymnastics2021} aims to determine the 
 impact of individual apparatus difficulty and execution scores on overall score. 
 Expertise from this article could be useful in allowing us to understand how difficulty and execution scores 
-play a role in predicting the overall score. Additionally, the article \citet{JonasRohleder2023} 
-also can play a similar role in predicting overall 
+play a role in predicting the overall score. Additionally, the article by \citet{JonasRohleder2023} 
+can also play a similar role in predicting overall 
 score. Notably, the paper found that recent Olympic rule changes resulted in significantly enhanced performance 
 differentiation with the execution score being the main predictor of the final score. 
-Furthermore, in the article \citet{ApparatusDifficulty2010} the authors use regression, cluster, and ANOVA analysis to 
+Furthermore, in the article by \citet{ApparatusDifficulty2010}, the authors use regression, cluster, and ANOVA analysis to 
 analyze how difficulty scores predict overall score differently across different apparatuses. However, in this 
-article the authors found that while difficulty scores may have predictive tendancies for some apparatuses, 
+article the authors found that while difficulty scores may have predictive tendencies for some apparatuses, 
 the strength of the prediction varied drastically from apparatus to apparatus, with there being little to no 
 predictive ability for some apparatuses. Ultimately, the available literature on predicting artistic 
 gymnastic scores seemed generally limited to how difficulty and execution scores predict overall score, 
@@ -95,17 +95,17 @@ used as predictors at all.
 As existing literature fails to suggest how data from major domestic and international gymnastics competitions 
 from the seasons leading up to the Summer Olympics can be used to identify the ``best'' Olympic team candidates, 
 the analytical method presented in this paper aims to outline a procedure that takes into account data from recent 
-gymnastics competitions and Olympic competition structure in orer to identify the group of five athletes who will 
+gymnastics competitions and Olympic competition structure in order to identify the group of five athletes who will 
 enable the Team USA Olympic Women’s Artistic Gymnastics team to optimize success in Paris 2024. If Olympic 
 competition structure and recent competitive scores on each apparatus are taken into consideration, then an 
-anatlytical method dependent on mean and standard deviation derived parameters can be used to identify the foremost 
+analytical method dependent on mean and standard deviation derived parameters can be used to identify the foremost 
 candidates to compete on behalf of the United States at the Olympics.
 
 
 
 The rest of this paper is organized as follows. First, I will evaluate the data that is available in order to complete 
 this project in Section~\ref{sec:data}. Then, I will discuss my 
-analytical methods to determine the atheltes that should be sent to the Olympics from the United States 
+analytical methods to determine the athletes that should be sent to the Olympics from the United States 
 in Section~\ref{sec:meth}. Later, I will present the results of my 
 methods in Section~\ref{sec:res}. Lastly, I will discuss the meaning of my results, some challenges, 
 and some limitations of this project in Section~\ref{sec:dis}.
@@ -123,7 +123,7 @@ of the Olympic outcomes in 2024 will be the most recent data.
 
 
 
-For the purposes of this research design, when determining the most ideal feamle olympic candidates, 
+For the purposes of this research design, when determining the most ideal female olympic candidates, 
 only data on female United States gymnasts is analyzed, presuming that the United States 
 female gymnasts have a strong chance at earning medals in any category, based on the results of the 2020 Summer Olympics. 
 However, several data processing steps are required to correct several inconsistencies in the data source prior to 
@@ -134,7 +134,7 @@ zero is further justified for the purposes of knowing the true mean scores of ea
 apparatus for each successful attempt. Additionally, for some athletes and competitions vault
 scores are reported as ``VT,'' ``VT1,'' and ``VT2.'' This discrepancy is due to the fact that athletes are permitted
 two attempts on the vault apparatus. In an effort to interpret the data as accurately as possible and avoid having 
-multiple statistics for one athlete on the same apparatus, this discrepency is corrected by merging ``VT,'' ``VT1,'' and 
+multiple statistics for one athlete on the same apparatus, this discrepancy is corrected by merging ``VT,'' ``VT1,'' and 
 ``VT2'' to all be reported as ``VT.'' Also, the data source is flawed as it alternates between reporting athlete names
 in upper or lower case letters. In order to correct this, all last names are converted to lower case for consistency 
 purposes. Lastly, the data source is inconsistent in the manner that it reports the first names of athletes as certain
@@ -153,22 +153,22 @@ which five athletes stand the greatest chance of winning the gold medal for the 
 team all-around, Balance Beam, Floor Exercise, Uneven Bars, and Vault. 
 
 In order to reduce the vast list of United States female gymnasts to just five athletes, the proposed method in 
-this paper utilizes a paramter value of the score standard deviation multipled by some alpha value subtracted 
-from the mean score for each apparatus, or $\mu - \alpha \sigma$. This paramter value serves to rank athletes based 
-on having both a high mean score for a particualr event and low standard deviation. By subtracting the standard deviation 
+this paper utilizes a parameter value of the score standard deviation multiplied by some alpha value subtracted 
+from the mean score for each apparatus, or $\mu - \alpha \sigma$. This parameter value serves to rank athletes based 
+on having both a high mean score for a particular event and low standard deviation. By subtracting the standard deviation 
 from the mean score, we are able to identify the ``best'' athletes as having the highest parameter values. 
 This alpha value is decided by examining the plots of the mean versus the standard deviation of the ten athletes 
 with the highest mean scores on each apparatus. The default alpha value is 1, and ideally this produces a parameter 
 value where the athletes with the highest mean scores and lowest standard deviations have the highest parameter values. 
 However, in cases where the rank produced by the parameter value selects athletes with comparatively low mean scores and 
-low standrad deviations prior to athletes with significantly higher mean scores and slightly high standard deviations, 
+low standard deviations prior to athletes with significantly higher mean scores and slightly high standard deviations, 
 this alpha value should be reduced until the rank of the athletes coordinates with the order that seems visually most 
 logical based on the plots. While the parameters are to an extent subjective, in the final analysis the exact rank that 
 is determined by the parameter is not terribly signifiant as the parameter values are used to determine the top five 
 athletes for each apparatus and typically play the largest role in determining which athletes are included at the margin. 
-Ultimately, if an athlete is bordering being 4th, 5th, 6th, or 7th best for a particualr apparatus in the United States 
+Ultimately, if an athlete is bordering being 4th, 5th, 6th, or 7th best for a particular apparatus in the United States 
 and the athlete is not superior on another apparatus, it is highly unlikely that they would be selected for the Olympic 
-team at all. In cases where an athlete only has one observation for a prticular apparatus, the 
+team at all. In cases where an athlete only has one observation for a particular apparatus, the 
 standard deviation value is unavailable and thus the parameter value cannot be calculated. For the purposes of this 
 research, it is reasonable to ignore any athletes who have only competed once on a particular apparatus as they would 
 likely not be selected to compete on that apparatus at the Olympics.
@@ -265,15 +265,15 @@ and then adhered to the following procedure:
   \cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
 Athlete & $\mu - \sigma$ & Athlete & $\mu - \sigma$ & Athlete & $\mu - 0.5 \sigma$ & Athlete & $\mu - 0.5 \sigma$\\
 \midrule
-biles & 14.38 & biles & 14.55 & jones & 14.26 & Biles & 14.78\\
+biles & 14.38 & biles & 14.55 & jones & 14.26 & biles & 14.78\\
 \midrule
-mcclain & 14.14 & lincoln & 13.73 & biles & 14.17 & Carey & 14.36\\
+mcclain & 14.14 & lincoln & 13.73 & biles & 14.17 & carey & 14.36\\
 \midrule
-lee & 13.69 & carey & 13.41 & wong & 13.59 & Mcclain & 14.20\\
+lee & 13.69 & carey & 13.41 & wong & 13.59 & mcclain & 14.20\\
 \midrule
-sumanasekera & 12.95 & dicello & 13.4 & matthews & 13.50 & Jones & 14.20\\
+sumanasekera & 12.95 & dicello & 13.4 & matthews & 13.50 & jones & 14.20\\
 \midrule
-blakely & 12.78 & chiles & 13.38 & blakely & 13.49 & Chiles & 14.11\\
+blakely & 12.78 & chiles & 13.38 & blakely & 13.49 & chiles & 14.11\\
 \midrule
 jones & 12.58 & jones & 13.29 & greaves & 13.47 & sumanasekera & 14.07\\
 \midrule
@@ -290,8 +290,8 @@ frazier & NA & frazier & NA & walker & NA & torry & NA\\
 
 Based on the plot of the top ten female athletes on the balance beam apparatus in figure~\ref{fig:FA} I selected the parameter of 
 the score standard deviation subtracted from the mean score in order to identify the best suited five 
-athletes. Based on the parameter displayed in table~\ref[tablebbp], the five ``best'' female athletes on balance beam are Biles, Mcclain, 
-Lee, Sumanasekera, and Blakely with Biles and McClain being expert for this apparatus. Simialrly, the five ``best'' 
+athletes. Based on the parameter displayed in table~\ref[tablebbp], the five ``best'' female athletes on balance beam are Biles, McClain, 
+Lee, Sumanasekera, and Blakely with Biles and McClain being expert for this apparatus. Similarly, the five ``best'' 
 female athletes for floor exercise are Biles, Lincoln, Carey, 
 Mcclain, Dicello, Chiles with Biles and Lincoln being expert for this apparatus. Based on the plot of the top ten 
 female athletes on the uneven bars apparatus I selected the parameter of 
@@ -302,7 +302,7 @@ athletes on vault are Biles, Carey, Mcclain, Jones,
 and Chiles with Biles and Carey being expert for this apparatus.
 
 Ultimately, the list of athletes that ranked among the top five United States female athletes includes Biles, 
-Mcclain, Lee, Sumanasekera, Blakely, Carey, Jones, Chiles, Wong, Matthews, Lincoln, and Dicello. However, Lee 
+McClain, Lee, Sumanasekera, Blakely, Carey, Jones, Chiles, Wong, Matthews, Lincoln, and Dicello. However, Lee 
 only has reported data for two out of four of the female apparatuses so she will not be considered with the other 
 eleven athletes for individual or team all-around.
 
@@ -314,10 +314,10 @@ eleven athletes for individual or team all-around.
 \end{figure}
 
 Based on the plots in figure~\ref{fig:FAA}, it is very clear that Biles is strong candidate to 
-compete for the individual all-around medal. However, it is not clear whether Jones or Mcclain is better suited 
+compete for the individual all-around medal. However, it is not clear whether Jones or McClain is better suited 
 to be the second United States individual all-around candidate. Looking at the data values and plot of the combinations of three athletes, 
-it is clear that Biles, Jones, and Mcclain are by far the best suited trio to compete for the team all-around medal. 
-Additionally, since this data suggests that both Mcclain and Jones should compete in the qualifying round, there 
+it is clear that Biles, Jones, and McClain are by far the best suited trio to compete for the team all-around medal. 
+Additionally, since this data suggests that both McClain and Jones should compete in the qualifying round, there 
 is no need to select one over the other for the second individual all-around candidate spot as they would both get 
 the opportunity to qualify, and their scores at the Olympics will determine which athlete, if either, will qualify 
 to attend the individual all-around finals. Looking at plot of the combinations of four athletes, it is not clear whether Chiles, Carey, or 
@@ -325,7 +325,7 @@ Blakely is best suited to be the fourth team all-around candidate as their means
 similar. However, looking at the individual apparatus events provides justification for who to ultimately select. 
 Knowing that two athletes per country can compete for an apparatus medal, it is strategic to try to compose the 
 team of the best two United States athletes for each apparatus. Based on the computations and plots, the superior two 
-athletes on balance beam are Biles and Mcclain, the superior two athletes on floor exercise are Biles and Lincoln, 
+athletes on balance beam are Biles and McClain, the superior two athletes on floor exercise are Biles and Lincoln, 
 the superior two athletes on uneven bars are Jones and Biles, and the superior two athletes on vault are Biles 
 and Carey. Since Lincoln was not among our top candidates for an all-around medal, it would be logical to select her 
 as the fifth United States Olympic team member who does not compete in the all-around qualifying round. Additionally, 
@@ -336,30 +336,30 @@ Blakely, the selection of Carey can be further justified by the facts that the s
 within one point the combination including Carey has the lowest summed standard deviation.
 
 Hence, based on the proposed method, in order to maximize the number of medals the Unites States female team wins, 
-the team should be comprised of the athletes Biles, Jones, Mcclain, Lincoln, and Carey.
+the team should be comprised of the athletes Biles, Jones, McClain, Lincoln, and Carey.
  
 \section{Discussion}
 \label{sec:dis}
 
-Using an anatlytical method dependent on mean and standard deviation derived parameters, this paper 
+Using an analytical method dependent on mean and standard deviation derived parameters, this paper 
 outlines a procedure for identifying the Team USA Olympic Women’s Artistic Gymnastics team that will optimize 
-success at the Olympics through numberically evaluating each USA athlete based on both their accuracy and precision. 
+success at the Olympics through numerically evaluating each USA athlete based on both their accuracy and precision. 
 Ultimately, Simone Biles, Shilese Jones, Konnor McClain, Kaliya Lincoln, and Jade Carey can be identified as the 
 the group of five athletes who will enable the Team USA Olympic Women’s Artistic Gymnastics teams to optimize 
 success at the 2024 Paris Summer Olympics based on this method.
 
-At various steps throughout the procedure large qualtities of athletes were eliminated from consideration 
+At various steps throughout the procedure large quantities of athletes were eliminated from consideration 
 based on various analytical decisions. For example, most athletes were eliminated from consideration as 
 only athletes that ranked in the top ten by mean score alone for each apparatus were inspected. This was a 
 reasonable elimination of data as the score values among the top ten candidates varied enough, often by over a 
 full point, to justify that athletes that never ranked in the top ten for a particular apparatus are not 
 competitive enough to medal at the Olympics. Furthermore, this list of athletes was also reduced by half by the 
-use of a subjectively determined paraemter, but this decision is also justified as only two athletes from each 
+use of a subjectively determined parameter, but this decision is also justified as only two athletes from each 
 country can compete for an apparatus medal, so reducing the considered candidates to only the top five for each 
-apparatus is reasonable as it would be highly unlikely for the 6th best USA candidate for a particualar apparatus 
+apparatus is reasonable as it would be highly unlikely for the 6th best USA candidate for a particular apparatus 
 to medal at the Olympics.
 
-Notably, this algorithm is not powerful for strong athletes with few attempts on a particualr apparatus as individuals 
+Notably, this algorithm is not powerful for strong athletes with few attempts on a particular apparatus as individuals 
 with only one attempt could not possess a parameter value and thus were eliminated. Additionally, this algorithm 
 would not be strong for a country that is inferior at certain events as this model assumes athletes from the country 
 of interest have a reasonable chance at medaling in any category. As such, this model is designed to have the strongest 
@@ -411,7 +411,7 @@ with Juda, Malone, and Young in the all-around qualifying round. Comparatively, 
 teammate is challenging as there are several apparatuses where our ``best'' competitor is not among the four 
 previously selected teammates. However, through examining the the mean score for every male gymnast on every apparatus 
 we can see that many of our ``best'' candidates are still ranked very poorly globally, and therefore would not have a 
-strong liklihood of medalling at the Olympics. Among all of the male USA athletes that are not yet selected, the only 
+strong likelihood of medalling at the Olympics. Among all of the male USA athletes that are not yet selected, the only 
 athlete that has a relatively decent chance of medaling is Hale, who ranks 6th globally for the Vault apparatus.
 
 Ultimately, in order to maximize the the number of medals the Unites States male team wins, the team should be comprised  
