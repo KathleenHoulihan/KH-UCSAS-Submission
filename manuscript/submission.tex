@@ -126,11 +126,10 @@ For women, the data challenge presents the task of determining
 which five athletes stand the greatest chance of winning the gold medal for the women's individual all-around,
 team all-around, Balance Beam, Floor Exercise, Uneven Bars, and Vault. 
 
-In order to reduce the vast list of United States female gymnasts to just five athletes, the proposed method in 
+In order to reduce the list of USA gymnasts to just five athletes, the proposed method in 
 this paper utilizes a parameter value of the score standard deviation multiplied by some alpha value subtracted 
 from the mean score for each apparatus, or $\mu - \alpha \sigma$. This parameter value serves to rank athletes based 
-on having both a high mean score for a particular event and low standard deviation. By subtracting the standard deviation 
-from the mean score, we are able to identify the ``best'' athletes as having the highest parameter values. 
+on having both a high mean score for a particular event and low standard deviation. 
 This alpha value is decided by examining the plots of the mean versus the standard deviation of the ten athletes 
 with the highest mean scores on each apparatus. The default alpha value is 1, and ideally this produces a parameter 
 value where the athletes with the highest mean scores and lowest standard deviations have the highest parameter values. 
@@ -142,9 +141,8 @@ is determined by the parameter is not terribly signifiant as the parameter value
 athletes for each apparatus and typically play the largest role in determining which athletes are included at the margin. 
 Ultimately, if an athlete is bordering being 4th, 5th, 6th, or 7th best for a particular apparatus in the United States 
 and the athlete is not superior on another apparatus, it is highly unlikely that they would be selected for the Olympic 
-team at all. In cases where an athlete only has one observation for a particular apparatus, the 
-standard deviation value is unavailable and thus the parameter value cannot be calculated. For the purposes of this 
-research, it is reasonable to ignore any athletes who have only competed once on a particular apparatus as they would 
+team at all. For the purposes of this research, it is reasonable to ignore any athletes who have only competed once 
+on a particular apparatus and do not have a parameter value as they would 
 likely not be selected to compete on that apparatus at the Olympics.
 
 In order to select the appropriate athletes, I first processed the data as described in Section~\ref{sec:data} 
@@ -275,11 +273,6 @@ Matthews, and Blakely with Jones and Biles being expert for this apparatus. Simi
 athletes on vault are Biles, Carey, Mcclain, Jones, 
 and Chiles with Biles and Carey being expert for this apparatus.
 
-Ultimately, the list of athletes that ranked among the top five United States female athletes includes Biles, 
-McClain, Lee, Sumanasekera, Blakely, Carey, Jones, Chiles, Wong, Matthews, Lincoln, and Dicello. However, Lee 
-only has reported data for two out of four of the female apparatuses so she will not be considered with the other 
-eleven athletes for individual or team all-around.
-
 \begin{figure}
   \centering
   \includegraphics[scale=0.55]{FinalFemaleAllAroundPlot.pdf}
@@ -288,26 +281,17 @@ eleven athletes for individual or team all-around.
 \end{figure}
 
 Based on the plots in Figure~\ref{fig:FAA}, it is very clear that Biles is strong candidate to 
-compete for the individual all-around medal. However, it is not clear whether Jones or McClain is better suited 
-to be the second United States individual all-around candidate. Looking at the data values and plot of the combinations of three athletes, 
+compete for the individual all-around medal. Looking at the data values and plot of the combinations of three athletes, 
 it is clear that Biles, Jones, and McClain are by far the best suited trio to compete for the team all-around medal. 
-Additionally, since this data suggests that both McClain and Jones should compete in the qualifying round, there 
-is no need to select one over the other for the second individual all-around candidate spot as they would both get 
-the opportunity to qualify, and their scores at the Olympics will determine which athlete, if either, will qualify 
-to attend the individual all-around finals. Looking at plot of the combinations of four athletes, it is not clear whether Chiles, Carey, or 
+Looking at plot of the combinations of four athletes, it is not clear whether Chiles, Carey, or 
 Blakely is best suited to be the fourth team all-around candidate as their means and standard deviations are very 
-similar. However, looking at the individual apparatus events provides justification for who to ultimately select. 
-Knowing that two athletes per country can compete for an apparatus medal, it is strategic to try to compose the 
-team of the best two United States athletes for each apparatus. Based on the computations and plots, the superior two 
+similar. However, based on the computations and plots, the superior two 
 athletes on balance beam are Biles and McClain, the superior two athletes on floor exercise are Biles and Lincoln, 
 the superior two athletes on uneven bars are Jones and Biles, and the superior two athletes on vault are Biles 
 and Carey. Since Lincoln was not among our top candidates for an all-around medal, it would be logical to select her 
 as the fifth United States Olympic team member who does not compete in the all-around qualifying round. Additionally, 
 since Carey is one of the candidates being considering for the all-around qualifying round and she is one of our superior 
-athletes on vault, it is reasonable to also select her to be the final member of the Olympic team. Although, the 
-summed combination that included Carey has the lowest mean in comparison to the combinations including Chiles or 
-Blakely, the selection of Carey can be further justified by the facts that the summed mean score difference is 
-within one point the combination including Carey has the lowest summed standard deviation.
+athletes on vault, it is reasonable to also select her to be the final member of the Olympic team. 
 
 Hence, based on the proposed method, in order to maximize the number of medals the Unites States female team wins, 
 the team should be comprised of the athletes Biles, Jones, McClain, Lincoln, and Carey.
@@ -375,20 +359,7 @@ to the 2024 Olympics was very similar, but varied when it came to determining th
 using the same method to determine the United States' best four male candidates for the team all-around qualification 
 round, I calculated the mean score for every male gymnast on every apparatus in order to determine which apparatuses 
 the male USA team had the greatest chance of earning medals on. From this data, there was only one additional male 
-USA gymnast that ranked globally in the top ten for a particular apparatus based on mean score alone.
-
-
-
-Similar to the female model, I used the same method to determine the ``best'' male all-around candidates as I did for females. From 
-Figure~\ref{fig:MAA} I determined that Juda and Malone are the best male Individual all-around candidates, 
-Juda, Malone, and Young are the best male team all-around finalists, and Moldauer is the best candidate to also compete 
-with Juda, Malone, and Young in the all-around qualifying round. Comparatively, determining the ``best'' fifth Olympic 
-teammate is challenging as there are several apparatuses where our ``best'' competitor is not among the four 
-previously selected teammates. However, through examining the the mean score for every male gymnast on every apparatus 
-we can see that many of our ``best'' candidates are still ranked very poorly globally, and therefore would not have a 
-strong likelihood of medalling at the Olympics. Among all of the male USA athletes that are not yet selected, the only 
-athlete that has a relatively decent chance of medaling is Hale, who ranks 6th globally for the Vault apparatus.
-
+USA gymnast that ranked globally in the top ten for a particular apparatus based on mean score alone. 
 Ultimately, in order to maximize the the number of medals the Unites States male team wins, the team should be comprised  
 of the athletes Juda, Malone, Young, Moldauer, and Hale.
 
